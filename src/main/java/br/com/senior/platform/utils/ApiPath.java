@@ -42,7 +42,7 @@ public class ApiPath {
     @UtilityClass
     public class Cms {
 
-        public static final String REGISTERA_NALYTIC = "registerAnalytic";
+        public static final String REGISTER_ANALYTIC = "registerAnalytic";
         public static final String LIST_ANALYTICS = "listAnalytics";
         public static final String GET_ANALYTIC = "getAnalytic";
         public static final String GET_ANALYTICS = "getAnalytics";
@@ -66,7 +66,7 @@ public class ApiPath {
         public static final String REMOVE_LANDING_PAGE = "removeLandingPage";
         public static final String REMOVE_PERSONAL_LANDING_PAGES = "removePersonalLandingPages";
         public static final String REMOVE_ALL_PERSONAL_LANDING_PAGES = "removeAllPersonalLandingPages";
-        public static final String LIST_FACTORYDEFAULTLANDINGPAGES = "listFactoryDefaultLandingPages";
+        public static final String LIST_FACTORY_DEFAULT_LANDING_PAGES = "listFactoryDefaultLandingPages";
         public static final String LIST_WIDGETS = "listWidgets";
         public static final String GET_WIDGET = "getWidget";
         public static final String LIST_FACTORY_DEFAULT_WIDGETS = "listFactoryDefaultWidgets";
