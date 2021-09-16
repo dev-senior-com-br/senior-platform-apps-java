@@ -105,7 +105,7 @@ public class CmsClient extends BaseClient {
     }
 
     /**
-     * Retorna um lista de componentes do tipo analytics filtrando por ids.
+     * Retorna uma lista de componentes do tipo analytics filtrando por ids.
      *
      * @param payload - Payload de entrada com informações necessárias para consultar uma lista de componentes do tipo analytic.
      * @return - Payload de saída com a lista de analytics recuperados.
