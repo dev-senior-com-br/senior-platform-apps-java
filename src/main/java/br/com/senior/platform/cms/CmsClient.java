@@ -100,7 +100,8 @@ public class CmsClient extends BaseClient {
      * @return - Payload de saída com o analytic recuperado.
      * @throws ServiceException - Erro tratado do serviço.
      */
-    public GetAnalyticOutput getAnalytic(GetAnalyticInput payload) throws ServiceException {
+    public GetAnalyticOutput getAnalytic(String analyticId) throws ServiceException {
+        GetAnalyticInput payload = new GetAnalyticInput(analyticId);
         return execute(getActionsUrl(ApiPath.Cms.GET_ANALYTIC), payload, token, GetAnalyticOutput.class);
     }
 
@@ -133,7 +134,8 @@ public class CmsClient extends BaseClient {
      * @return - Payload de saída com o identificador do analytic com o registro cancelado.
      * @throws ServiceException - Erro tratado do serviço.
      */
-    public UnregisterAnalyticOutput unregisterAnalytic(UnregisterAnalyticInput payload) throws ServiceException {
+    public UnregisterAnalyticOutput unregisterAnalytic(String analyticId) throws ServiceException {
+        UnregisterAnalyticInput payload = new UnregisterAnalyticInput(analyticId);
         return execute(getActionsUrl(ApiPath.Cms.UNREGISTERAN_ALYTIC), payload, token, UnregisterAnalyticOutput.class);
     }
 
@@ -144,7 +146,8 @@ public class CmsClient extends BaseClient {
      * @return - Payload de saída com a quantidade de analytics que utilizam o dataset.
      * @throws ServiceException - Erro tratado do serviço.
      */
-    public CountAnalyticsDatasetOutput countAnalyticsDataset(CountAnalyticsDatasetInput payload) throws ServiceException {
+    public CountAnalyticsDatasetOutput countAnalyticsDataset(String datasetId) throws ServiceException {
+        CountAnalyticsDatasetInput payload = new CountAnalyticsDatasetInput(datasetId);
         return execute(getActionsUrl(ApiPath.Cms.COUNT_ANALYTICS_DATASET), payload, token, CountAnalyticsDatasetOutput.class);
     }
 
@@ -198,7 +201,8 @@ public class CmsClient extends BaseClient {
      * @return - Payload de saída com as informações de uma página.
      * @throws ServiceException - Erro tratado do serviço.
      */
-    public GetPageOutput getPage(GetPageInput payload) throws ServiceException {
+    public GetPageOutput getPage(String pageId) throws ServiceException {
+        GetPageInput payload = new GetPageInput(pageId);
         return execute(getActionsUrl(ApiPath.Cms.GET_PAGE), payload, token, GetPageOutput.class);
     }
 
@@ -209,7 +213,8 @@ public class CmsClient extends BaseClient {
      * @return - Payload de saída com os recursos utilizados para a exibição de uma página.
      * @throws ServiceException - Erro tratado do serviço.
      */
-    public GetPageResourcesOutput getPageResources(GetPageResourcesInput payload) throws ServiceException {
+    public GetPageResourcesOutput getPageResources(String pageId) throws ServiceException {
+        GetPageResourcesInput payload = new GetPageResourcesInput(pageId);
         return execute(getActionsUrl(ApiPath.Cms.GET_PAGE_RESOURCES), payload, token, GetPageResourcesOutput.class);
     }
 
@@ -233,7 +238,8 @@ public class CmsClient extends BaseClient {
      * @return - Payload de saída com o identificador da página excluída.
      * @throws ServiceException - Erro tratado do serviço.
      */
-    public RemovePageOutput removePage(RemovePageInput payload) throws ServiceException {
+    public RemovePageOutput removePage(String pageId) throws ServiceException {
+        RemovePageInput payload = new RemovePageInput(pageId);
         return execute(getActionsUrl(ApiPath.Cms.REMOVE_PAGE), payload, token, RemovePageOutput.class);
     }
 
@@ -290,7 +296,8 @@ public class CmsClient extends BaseClient {
      * @return - Payload de saída com a landing page recuperada.
      * @throws ServiceException - Erro tratado do serviço.
      */
-    public GetLandingPageOutput getLandingPage(GetLandingPageInput payload) throws ServiceException {
+    public GetLandingPageOutput getLandingPage(String landingPageId) throws ServiceException {
+        GetLandingPageInput payload = new GetLandingPageInput(landingPageId);
         return execute(getActionsUrl(ApiPath.Cms.GET_LANDING_PAGE), payload, token, GetLandingPageOutput.class);
     }
 
@@ -313,7 +320,8 @@ public class CmsClient extends BaseClient {
      * @return - Payload de saída com o identificador da landing page excluída.
      * @throws ServiceException - Erro tratado do serviço.
      */
-    public RemoveLandingPageOutput removeLandingPage(RemoveLandingPageInput payload) throws ServiceException {
+    public RemoveLandingPageOutput removeLandingPage(String landingPageId) throws ServiceException {
+        RemoveLandingPageInput payload = new RemoveLandingPageInput(landingPageId);
         return execute(getActionsUrl(ApiPath.Cms.REMOVE_LANDING_PAGE), payload, token, RemoveLandingPageOutput.class);
     }
 
@@ -323,7 +331,8 @@ public class CmsClient extends BaseClient {
      * @param payload - Payload de entrada com informações necessárias para apagar todas as landing pages personalizadas do usuário.
      * @throws ServiceException - Erro tratado do serviço.
      */
-    public void removePersonalLandingPages(RemovePersonalLandingPagesInput payload) throws ServiceException {
+    public void removePersonalLandingPages(String user) throws ServiceException {
+        RemovePersonalLandingPagesInput payload = new RemovePersonalLandingPagesInput(user);
         execute(getActionsUrl(ApiPath.Cms.REMOVE_PERSONAL_LANDING_PAGES), payload, token, Object.class);
     }
 
@@ -365,7 +374,8 @@ public class CmsClient extends BaseClient {
      * @return - Payload de saída com o widget recuperado.
      * @throws ServiceException - Erro tratado do serviço.
      */
-    public Widget getWidget(GetWidgetInput payload) throws ServiceException {
+    public Widget getWidget(String widgetId) throws ServiceException {
+        GetWidgetInput payload = new GetWidgetInput(widgetId);
         return execute(getActionsUrl(ApiPath.Cms.GET_WIDGET), payload, token, Widget.class);
     }
 
