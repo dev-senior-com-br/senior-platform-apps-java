@@ -84,6 +84,61 @@ public class CmsClientExample {
         accessToken = authenticate();
         cmsClient = new CmsClient(accessToken, Environment.HOMOLOG);
 
+        // registerAnalytic();
+
+        // copyAnalytic();
+
+        // getAnalytic();
+
+        // getAnalytics();
+
+        // unregisterAnalytic();
+
+        // listAnalytics();
+
+        // countAnalyticsDataset();
+
+        // listFactoryDefaultAnalytics();
+
+        // savePage();
+
+        // copyPage();
+
+        // removePage();
+
+        // listPages();
+
+        // listFactoryDefaultPages();
+
+        // getPage();
+
+        // getPageResources();
+
+        // setPageAnalyticFilter();
+
+        // saveLandingPage();
+
+        // saveLandingPagesOrder();
+
+        // removeLandingPage();
+
+        // getLandingPage();
+
+        // getUserLandingPages();
+
+        // removePersonalLandingPages();
+
+        // removeAllPersonalLandingPages();
+
+        // listLandingPages();
+
+        // listFactoryDefaultLandingPages();
+
+        // listWidgets();
+
+        // getWidget();
+
+        // listFactoryDefaultWidgets();
     }
 
     private static void registerAnalytic() throws ServiceException {
@@ -137,9 +192,7 @@ public class CmsClientExample {
 
         String analyticId = "analytic://senior.com.br/analytic_1";
 
-        GetAnalyticInput payload = GetAnalyticInput.builder().analyticId(analyticId).build();
-
-        GetAnalyticOutput output = cmsClient.getAnalytic(payload);
+        GetAnalyticOutput output = cmsClient.getAnalytic(analyticId);
 
         printMessage(String.format("Id: %s \nNome: %s \nTítulo: %s", output.getAnalytic().getId(), output.getAnalytic().getName(), output.getAnalytic().getTitle()));
     }
@@ -169,19 +222,19 @@ public class CmsClientExample {
     private static void unregisterAnalytic() throws ServiceException {
         printMessage("\nunregisterAnalytic...");
 
-        UnregisterAnalyticInput payload = new UnregisterAnalyticInput();
-        payload.setAnalyticId("analytic://analytic/one");
+        String analyticId = "analytic://senior.com.br/analytic_1";
 
-        UnregisterAnalyticOutput output = cmsClient.unregisterAnalytic(payload);
+        UnregisterAnalyticOutput output = cmsClient.unregisterAnalytic(analyticId);
+
+        printMessage(String.format("Identificador do analytic desregistrado: %s", output.getAnalyticId()));
     }
 
     private static void countAnalyticsDataset() throws ServiceException {
         printMessage("\ncountAnalyticsDataset...");
 
-        CountAnalyticsDatasetInput payload = new CountAnalyticsDatasetInput();
-        payload.setDatasetId("dataset://custom-dataset");
+        String datasetId = "dataset://custom-dataset";
 
-        CountAnalyticsDatasetOutput output = cmsClient.countAnalyticsDataset(payload);
+        CountAnalyticsDatasetOutput output = cmsClient.countAnalyticsDataset(datasetId);
 
         printMessage(String.format("Quantidade de analytics que utilizam o dataset: %s", output.getSize()));
     }
@@ -196,6 +249,8 @@ public class CmsClientExample {
         payload.getPagination().setPageSize(10L);
 
         ListFactoryDefaultAnalyticsOutput output = cmsClient.listFactoryDefaultAnalytics(payload);
+
+        output.getAnalytics().stream().forEach(o -> printMessage(String.format("Id: %s \nNome: %s \nTítulo: %s", o.getId(), o.getName(), o.getTitle())));
     }
 
     private static void setPageAnalyticFilter() throws ServiceException {
@@ -203,7 +258,7 @@ public class CmsClientExample {
 
         SetPageAnalyticFilterInput payload = new SetPageAnalyticFilterInput();
         payload.setAnalyticId("analytic://senior.com.br/analytic_1");
-        payload.setPageId("page://senior.com.br/page_2");
+        payload.setPageId("page://senior.com.br/my_custom_page");
 
         cmsClient.setPageAnalyticFilter(payload);
     }
@@ -223,7 +278,7 @@ public class CmsClientExample {
         basicComponent.setWidth(6L);
         basicComponent.setPosition(new Position(0L, 0L));
 
-        payload.setComponents(basicComponent);
+        payload.setComponents(List.of(basicComponent));
 
         SavePageOutput output = cmsClient.savePage(payload);
 
@@ -234,37 +289,41 @@ public class CmsClientExample {
         printMessage("\nlistPages...");
 
         ListPagesInput payload = new ListPagesInput();
-        payload.setSearchValue("page_");
+        payload.setSearchValue("My");
         payload.setOwnerOnly(true);
-        payload.setPagination(new Pagination(1L, 3L));
+        payload.setPagination(new Pagination(0L, 3L));
 
         ListPagesOutput output = cmsClient.listPages(payload);
+
+        output.getPages().stream().forEach(o -> printMessage(String.format("Id: %s \nNome: %s \nTipo de posição: %s", o.getId(), o.getName(), o.getPositionType())));
     }
 
     private static void getPage() throws ServiceException {
         printMessage("\ngetPage...");
 
-        GetPageInput payload = new GetPageInput();
-        payload.setPageId("page://senior.com.br/my_custom_page");
+        String pageId = "page://senior.com.br/my_custom_page";
 
-        GetPageOutput output = cmsClient.getPage(payload);
+        GetPageOutput output = cmsClient.getPage(pageId);
+
+        printMessage(String.format("Id: %s \nNome: %s \nTipo de posição: %s", output.getPage().getId(), output.getPage().getName(), output.getPage().getPositionType()));
     }
 
     private static void getPageResources() throws ServiceException {
         printMessage("\ngetPageResources...");
 
-        GetPageResourcesInput payload = new GetPageResourcesInput();
-        payload.setPageId("page://senior.com.br/my_custom_page");
+        String pageId = "page://senior.com.br/my_custom_page";
 
-        GetPageResourcesOutput output = cmsClient.getPageResources(payload);
+        GetPageResourcesOutput output = cmsClient.getPageResources(pageId);
+
+        output.getResources().stream().forEach(o -> printMessage(String.format("Nome: %s \nTipo: %s \nURI: %s \nAction URI: %s", o.getName(), o.getType(), o.getUri(), o.getActionUri())));
     }
 
     private static void copyPage() throws ServiceException {
         printMessage("\ncopyPage...");
 
         CopyPageInput payload = new CopyPageInput();
-        payload.setPageId("page://senior.com.br/page_1");
-        payload.setName("New Page");
+        payload.setPageId("page://senior.com.br/my_custom_page");
+        payload.setName("My Custom Page - Cópia teste");
 
         CopyPageOutput output = cmsClient.copyPage(payload);
 
@@ -274,10 +333,9 @@ public class CmsClientExample {
     private static void removePage() throws ServiceException {
         printMessage("\nremovePage...");
 
-        RemovePageInput payload = new RemovePageInput();
-        payload.setPageId("page://senior.com.br/page_1");
+        String pageId = "page://senior.com.br/my_custom_page";
 
-        RemovePageOutput output = cmsClient.removePage(payload);
+        RemovePageOutput output = cmsClient.removePage(pageId);
 
         printMessage(String.format("Identificador da página excluída: %s", output.getPageId()));
     }
@@ -287,9 +345,11 @@ public class CmsClientExample {
 
         ListFactoryDefaultPagesInput payload = new ListFactoryDefaultPagesInput();
         payload.setSearchValue("My Custom Page");
-        payload.setPagination(new Pagination(1L, 3L));
+        payload.setPagination(new Pagination(0L, 3L));
 
         ListFactoryDefaultPagesOutput output = cmsClient.listFactoryDefaultPages(payload);
+
+        output.getPages().stream().forEach(o -> printMessage(String.format("Id: %s \nNome: %s \nTipo de posição: %s", o.getId(), o.getName(), o.getPositionType())));
     }
 
     private static void saveLandingPage() throws ServiceException {
@@ -297,20 +357,21 @@ public class CmsClientExample {
 
         SaveLandingPageInput payload = new SaveLandingPageInput();
         payload.setId("landing://senior.com.br/landing_1");
-        payload.setPageId("page://senior.com.br/page_2");
+        payload.setPageId("page://senior.com.br/my_custom_page");
         payload.setTitle("Page X");
         payload.setIncludeHeader(true);
         payload.setLandingPageType(LandingPageType.SHARED);
-        payload.setRoles(List.of("role_1", "role_3"));
 
         SaveLandingPageOutput output = cmsClient.saveLandingPage(payload);
+
+        printMessage(String.format("Identificador da landing page criada: %s", output.getLandingPageId()));
     }
 
     private static void saveLandingPagesOrder() throws ServiceException {
         printMessage("\nsaveLandingPagesOrder...");
 
         SaveLandingPagesOrderInput payload = new SaveLandingPagesOrderInput();
-        payload.setLandingPageId(List.of("landing://landing-page-4", "landing://landing-page-3", "landing://landing-page-2", "landing://landing-page-1"));
+        payload.setLandingPageId(List.of("landing://senior.com.br/landing_3", "landing://senior.com.br/landing_1", "landing://senior.com.br/landing_2"));
 
         cmsClient.saveLandingPagesOrder(payload);
     }
@@ -319,34 +380,38 @@ public class CmsClientExample {
         printMessage("\nlistLandingPages...");
 
         ListLandingPagesInput payload = new ListLandingPagesInput();
-        payload.setSearchValue("Page 1");
-        payload.setPagination(new Pagination(1L, 2L));
+        payload.setSearchValue("Page");
+        payload.setPagination(new Pagination(0L, 5L));
 
         ListLandingPagesOutput output = cmsClient.listLandingPages(payload);
+
+        output.getLandingPages().stream().forEach(o -> printMessage(String.format("Id: %s \nId da Página: %s \nTítulo: %s", o.getId(), o.getPageId(), o.getTitle())));
     }
 
     private static void getLandingPage() throws ServiceException {
         printMessage("\ngetLandingPage...");
 
-        GetLandingPageInput payload = new GetLandingPageInput();
-        payload.setLandingPageId("landing://senior.com.br/landing_page_1");
+        String landingPageId = "landing://senior.com.br/landing_1";
 
-        GetLandingPageOutput output = cmsClient.getLandingPage(payload);
+        GetLandingPageOutput output = cmsClient.getLandingPage(landingPageId);
+
+        printMessage(String.format("Id: %s \nId da Página: %s \nTítulo: %s", output.getLandingPage().getId(), output.getLandingPage().getPage().getId(), output.getLandingPage().getTitle()));
     }
 
     private static void getUserLandingPages() throws ServiceException {
         printMessage("\ngetUserLandingPages...");
 
         GetUserLandingPagesOutput output = cmsClient.getUserLandingPages();
+
+        output.getLandingPages().stream().forEach(o -> printMessage(String.format("Id: %s \nId da Página: %s \nTítulo: %s", o.getId(), o.getPageId(), o.getTitle())));
     }
 
     private static void removeLandingPage() throws ServiceException {
         printMessage("\nremoveLandingPage...");
 
-        RemoveLandingPageInput payload = new RemoveLandingPageInput();
-        payload.setLandingPageId("landing://senior.com.br/landing_page_1");
+        String landingPageId = "landing://senior.com.br/landing_2";
 
-        RemoveLandingPageOutput output = cmsClient.removeLandingPage(payload);
+        RemoveLandingPageOutput output = cmsClient.removeLandingPage(landingPageId);
 
         printMessage(String.format("Identificador da landing page excluída: %s", output.getLandingPageId()));
     }
@@ -354,10 +419,9 @@ public class CmsClientExample {
     private static void removePersonalLandingPages() throws ServiceException {
         printMessage("\nremovePersonalLandingPages...");
 
-        RemovePersonalLandingPagesInput payload = new RemovePersonalLandingPagesInput();
-        payload.setUser("test@senior.com.br");
+        String user = "test@senior.com.br";
 
-        cmsClient.removePersonalLandingPages(payload);
+        cmsClient.removePersonalLandingPages(user);
     }
 
     private static void removeAllPersonalLandingPages() throws ServiceException {
@@ -374,6 +438,8 @@ public class CmsClientExample {
         payload.setPagination(new Pagination(0L, 10L));
 
         ListFactoryDefaultLandingPagesOutput output = cmsClient.listFactoryDefaultLandingPages(payload);
+
+        output.getLandingPages().stream().forEach(o -> printMessage(String.format("Id: %s \nId da Página: %s \nTítulo: %s", o.getId(), o.getPageId(), o.getTitle())));
     }
 
     private static void listWidgets() throws ServiceException {
@@ -384,16 +450,18 @@ public class CmsClientExample {
         payload.setPagination(new Pagination(0L, 10L));
 
         ListWidgetsOutput output = cmsClient.listWidgets(payload);
-        ;
+
+        output.getWidgets().stream().forEach(o -> printMessage(String.format("Id: %s \nId da Nome: %s \nDescrição: %s", o.getId(), o.getName(), o.getDescription())));
     }
 
     private static void getWidget() throws ServiceException {
         printMessage("\ngetWidget...");
 
-        GetWidgetInput payload = new GetWidgetInput();
-        payload.setWidgetId("widget://factory/domain/service/widget");
+        String widgetId = "widget://factory/domain/service/widget";
 
-        Widget output = cmsClient.getWidget(payload);
+        Widget output = cmsClient.getWidget(widgetId);
+
+        printMessage(String.format("Id: %s \nId da Nome: %s \nDescrição: %s", output.getId(), output.getName(), output.getDescription()));
     }
 
     private static void listFactoryDefaultWidgets() throws ServiceException {
@@ -404,6 +472,8 @@ public class CmsClientExample {
         payload.setPagination(new Pagination(0L, 10L));
 
         ListFactoryDefaultWidgetsOutput output = cmsClient.listFactoryDefaultWidgets(payload);
+
+        output.getWidgets().stream().forEach(o -> printMessage(String.format("Id: %s \nId da Nome: %s \nDescrição: %s", o.getId(), o.getName(), o.getDescription())));
     }
 
     private static String authenticate() throws ServiceException {
