@@ -36,6 +36,10 @@ public class SetPageAnalyticFilterInput {
 
     /**
      * This convenience constructor allows initialization of all required fields.
+     * 
+     * @param pageId - Identificador da página
+     * @param analyticId - Identificador do analytic
+     * 
      */
     public SetPageAnalyticFilterInput(String pageId, String analyticId) {
         this.pageId = pageId;

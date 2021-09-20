@@ -56,6 +56,13 @@ public class Analytic {
 
     /**
      * This convenience constructor allows initialization of all required fields.
+     * 
+     * @param id - Identificador do analytics seguindo o padrão: analytic://tenantDomain/identificadorUnico
+     * @param name - Título a ser exibido podendo ser uma chave de tradução no padrão platform.cms.nome
+     * @param chart - O tamanho preferido para melhor visualização
+     * @param createdBy - Criado por
+     * @param createdDate - Data de criação
+     * 
      */
     public Analytic(String id, String name, Chart chart, String createdBy, java.util.Date createdDate) {
         this.id = id;

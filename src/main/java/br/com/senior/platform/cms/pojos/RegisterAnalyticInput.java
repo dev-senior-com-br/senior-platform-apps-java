@@ -45,6 +45,11 @@ public class RegisterAnalyticInput {
 
     /**
      * This convenience constructor allows initialization of all required fields.
+     * 
+     * @param id - Identificador do analytics seguindo o padrão: analytic://tenantDomain/identificadorUnico
+     * @param name - Nome do analytic
+     * @param chart - Informações do gráfico do analytic, se não informado será mantido o estado anterior.
+     * 
      */
     public RegisterAnalyticInput(String id, String name, Chart chart) {
         this.id = id;

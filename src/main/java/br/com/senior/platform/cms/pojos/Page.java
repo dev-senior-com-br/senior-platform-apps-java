@@ -47,6 +47,12 @@ public class Page {
 
     /**
      * This convenience constructor allows initialization of all required fields.
+     * 
+     * @param id - Identificador da página no padrão page://{domínio do tenant}/{identificador único da página}
+     * @param name - Nome da página
+     * @param permission - Permissão necessária para visualizar a página
+     * @param components - Os componentes da página
+     * 
      */
     public Page(String id, String name, Permission permission, java.util.List<Component> components) {
         this.id = id;

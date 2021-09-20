@@ -43,6 +43,11 @@ public class Chart {
 
     /**
      * This convenience constructor allows initialization of all required fields.
+     * 
+     * @param type - Tipo do gráfico
+     * @param series - Conjunto de valores a serem exibidos, se o tipo de gráfico for pizza, somente um conjunto é aceito
+     * @param datasetId - Identificador do dataset que será vinculado ao gráfico
+     * 
      */
     public Chart(ChartType type, java.util.List<Series> series, String datasetId) {
         this.type = type;

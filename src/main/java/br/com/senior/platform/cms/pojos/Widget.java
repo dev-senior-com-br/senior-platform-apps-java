@@ -17,7 +17,7 @@ import lombok.Setter;
 public class Widget {
 
     /**
-     * Identificador URI desse widget. Deve seguir o formato widget://<tenant-domain>/<domain>/<service>/<name>
+     * Identificador URI desse widget. 
      */
     public String id;
     /**
@@ -51,6 +51,11 @@ public class Widget {
 
     /**
      * This convenience constructor allows initialization of all required fields.
+     * 
+     * @param id - Identificador URI desse widget.
+     * @param name - A chave de internacionalização do nome desse widget. Chave associada ao bundle do platform.cms
+     * @param url - A URL onde esse widget se encontra
+     * 
      */
     public Widget(String id, String name, String url) {
         this.id = id;

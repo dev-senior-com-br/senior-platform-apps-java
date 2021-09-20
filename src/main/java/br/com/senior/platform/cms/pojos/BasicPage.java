@@ -39,6 +39,11 @@ public class BasicPage {
 
     /**
      * This convenience constructor allows initialization of all required fields.
+     * 
+     * @param id - Identificador da página no padrão page://{domínio do tenant}/{identificador único da página}
+     * @param name - Nome da página
+     * @param permission - Permissão necessária para visualizar a página
+     * 
      */
     public BasicPage(String id, String name, Permission permission) {
         this.id = id;

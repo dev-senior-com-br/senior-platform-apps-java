@@ -39,6 +39,12 @@ public class BasicLandingPage {
 
     /**
      * This convenience constructor allows initialization of all required fields.
+     * 
+     * @param id - Identificador da landing page no formato landing://{domínio do tenant}/{identificador único da página}
+     * @param pageId - Identificador da página
+     * @param title - Se inclui o header da página com o título
+     * @param landingPageType - Tipo da landing page
+     * 
      */
     public BasicLandingPage(String id, String pageId, String title, LandingPageType landingPageType) {
         this.id = id;

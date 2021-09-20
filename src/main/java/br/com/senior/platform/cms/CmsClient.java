@@ -96,7 +96,7 @@ public class CmsClient extends BaseClient {
     /**
      * Consulta informações de um componente do tipo analytic.
      *
-     * @param payload - Payload de entrada com informações necessárias para consultar um componente do tipo analytic.
+     * @param analyticId - Payload de entrada com informações necessárias para consultar um componente do tipo analytic.
      * @return - Payload de saída com o analytic recuperado.
      * @throws ServiceException - Erro tratado do serviço.
      */
@@ -130,7 +130,7 @@ public class CmsClient extends BaseClient {
     /**
      * Cancela o registro de um componente do tipo analytic.
      *
-     * @param payload - Payload de entrada com informações necessárias para cancelar o registro de um componente do tipo analytic.
+     * @param analyticId - Payload de entrada com informações necessárias para cancelar o registro de um componente do tipo analytic.
      * @return - Payload de saída com o identificador do analytic com o registro cancelado.
      * @throws ServiceException - Erro tratado do serviço.
      */
@@ -142,7 +142,7 @@ public class CmsClient extends BaseClient {
     /**
      * Retorna a quantidade de analytics que estão utilizando o dataset.
      *
-     * @param payload - Payload de entrada com informações necessárias para retornar a quantidade de analytics que utilizam o dataset.
+     * @param datasetId - Payload de entrada com informações necessárias para retornar a quantidade de analytics que utilizam o dataset.
      * @return - Payload de saída com a quantidade de analytics que utilizam o dataset.
      * @throws ServiceException - Erro tratado do serviço.
      */
@@ -197,7 +197,7 @@ public class CmsClient extends BaseClient {
     /**
      * Permite buscar as informações de uma página.
      *
-     * @param payload - Payload de entrada com informações necessárias para buscar as informações de uma página.
+     * @param pageId - Payload de entrada com informações necessárias para buscar as informações de uma página.
      * @return - Payload de saída com as informações de uma página.
      * @throws ServiceException - Erro tratado do serviço.
      */
@@ -209,7 +209,7 @@ public class CmsClient extends BaseClient {
     /**
      * Retorna todos os recursos utilizados para a exibição de uma página.
      *
-     * @param payload - Payload de entrada com informações necessárias para consultar os recursos utilizados para a exibição de uma página.
+     * @param pageId - Payload de entrada com informações necessárias para consultar os recursos utilizados para a exibição de uma página.
      * @return - Payload de saída com os recursos utilizados para a exibição de uma página.
      * @throws ServiceException - Erro tratado do serviço.
      */
@@ -234,7 +234,7 @@ public class CmsClient extends BaseClient {
      * É necessário possuir permissão o recurso customizado na ação Excluir. 
      * Se remover uma página em uso por uma landing page, a mesma também é removida.
      *
-     * @param payload - Payload de entrada com informações necessárias para excluir uma página.
+     * @param pageId - Payload de entrada com informações necessárias para excluir uma página.
      * @return - Payload de saída com o identificador da página excluída.
      * @throws ServiceException - Erro tratado do serviço.
      */
@@ -292,7 +292,7 @@ public class CmsClient extends BaseClient {
     /**
      * Permite buscar as informações de uma landing page com as informações da página vinculada.
      *
-     * @param payload - Payload de entrada com informações necessárias para buscar uma landing page.
+     * @param landingPageId - Payload de entrada com informações necessárias para buscar uma landing page.
      * @return - Payload de saída com a landing page recuperada.
      * @throws ServiceException - Erro tratado do serviço.
      */
@@ -304,7 +304,6 @@ public class CmsClient extends BaseClient {
     /**
      * Lista as landing pages para visualização pelo usuário.
      *
-     * @param payload - Payload de entrada com informações necessárias para listar as landing pages para visualização pelo usuário.
      * @return - Payload de saída com a lista de landing pages
      * @throws ServiceException - Erro tratado do serviço.
      */
@@ -316,7 +315,7 @@ public class CmsClient extends BaseClient {
      * Permite remover uma landing page existente. 
      * Se possuir permissão somente na ação Personalizar, então só poderá excluir as landing pages pessoais.
      *
-     * @param payload - Payload de entrada com informações necessárias para remover uma landing page.
+     * @param landingPageId - Payload de entrada com informações necessárias para remover uma landing page.
      * @return - Payload de saída com o identificador da landing page excluída.
      * @throws ServiceException - Erro tratado do serviço.
      */
@@ -328,7 +327,7 @@ public class CmsClient extends BaseClient {
     /**
      * Apaga todas as landing pages personalizadas do usuário corrente ou do usuário informado.
      *
-     * @param payload - Payload de entrada com informações necessárias para apagar todas as landing pages personalizadas do usuário.
+     * @param user - Payload de entrada com informações necessárias para apagar todas as landing pages personalizadas do usuário.
      * @throws ServiceException - Erro tratado do serviço.
      */
     public void removePersonalLandingPages(String user) throws ServiceException {
@@ -370,7 +369,7 @@ public class CmsClient extends BaseClient {
     /**
      * Exibe as informações do widget buscando através do seu identificador.
      *
-     * @param payload - Payload de entrada com informações necessárias para exibir as informações do widget.
+     * @param widgetId - Payload de entrada com informações necessárias para exibir as informações do widget.
      * @return - Payload de saída com o widget recuperado.
      * @throws ServiceException - Erro tratado do serviço.
      */

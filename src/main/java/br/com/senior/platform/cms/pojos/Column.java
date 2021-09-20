@@ -63,6 +63,11 @@ public class Column {
 
     /**
      * This convenience constructor allows initialization of all required fields.
+     * 
+     * @param schema - Nome do schema
+     * @param table - Nome da tabela
+     * @param column - Nome da coluna
+     * 
      */
     public Column(String schema, String table, String column) {
         this.schema = schema;

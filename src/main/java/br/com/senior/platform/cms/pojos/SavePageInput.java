@@ -40,6 +40,11 @@ public class SavePageInput {
 
     /**
      * This convenience constructor allows initialization of all required fields.
+     * 
+     * @param id - Identificador da página no padrão page://{domínio do tenant}/{identificador único da página}
+     * @param name - Nome da página
+     * @param components - Os componentes da página
+     * 
      */
     public SavePageInput(String id, String name, java.util.List<BasicComponent> components) {
         this.id = id;

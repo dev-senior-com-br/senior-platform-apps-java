@@ -39,6 +39,12 @@ public class Order {
 
     /**
      * This convenience constructor allows initialization of all required fields.
+     * 
+     * @param schema - Nome do schema
+     * @param table - Nome da tabela
+     * @param column - Coluna em que será aplicado o filtro
+     * @param order - Ordem
+     * 
      */
     public Order(String schema, String table, String column, OrderType order) {
         this.schema = schema;
