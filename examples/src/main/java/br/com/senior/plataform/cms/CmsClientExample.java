@@ -360,7 +360,7 @@ public class CmsClientExample {
         payload.setPageId("page://senior.com.br/my_custom_page");
         payload.setTitle("Page X");
         payload.setIncludeHeader(true);
-        payload.setLandingPageType(LandingPageType.SHARED);
+        payload.setLandingPageType(LandingPageType.PERSONAL);
 
         SaveLandingPageOutput output = cmsClient.saveLandingPage(payload);
 
