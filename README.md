@@ -4,6 +4,7 @@ Esta biblioteca permite que desenvolvedores realizem integrações com algumas d
 
 Atualmente, as APIs disponibilizadas pelo SDK são:
 - **Workflow**: 
+- **Gerenciamento de Conteúdo - CMS**: 
 
 Alguns serviços como o HCM e SAM possuem suas próprias bibliotecas, que podem ser encontradas no perfil do [Dev Senior no GitHub](https://github.com/dev-senior-com-br). Adicionalmente, serviços essenciais como autenticação,  autorização, configuração e outros são disponibilizados pela [senior-core-java](https://github.com/dev-senior-com-br/senior-core-java).
 
@@ -19,7 +20,7 @@ A documentação Swagger para a versão web destas e outras APIs da Senior, assi
         <dependency>
             <groupId>br.com.senior</groupId>
             <artifactId>senior-platform-apps-java</artifactId>
-            <version>0.1.0</version>
+            <version>0.2.0</version>
         </dependency>
     </dependencies>
     ...
@@ -95,6 +96,7 @@ WorkflowClient workflowClient = new WorkflowClient(accessToken, Environment.PROD
 ### Exemplos implementados
 
 - [Workflow](examples/src/main/java/br/com/senior/plataform/workflow/WorkflowClientExample.java)
+- [Gerenciamento de Conteúdo - CMS](examples/src/main/java/br/com/senior/plataform/cms/CmsClientExample.java)
 
 ## Contribuições
 
