@@ -16,6 +16,6 @@ public class SaveLandingPageOutput {
     /**
      * Identificador da landing page
      */
-    public String landingPageId;
+    private String landingPageId;
 
 }

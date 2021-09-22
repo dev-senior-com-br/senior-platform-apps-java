@@ -16,6 +16,6 @@ public class GetUserLandingPagesOutput {
     /**
      * Retorna as informações das landing pages
      */
-    public java.util.List<BasicLandingPage> landingPages;
+    private java.util.List<BasicLandingPage> landingPages;
 
 }

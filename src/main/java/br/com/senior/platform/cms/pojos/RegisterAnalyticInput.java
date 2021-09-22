@@ -16,32 +16,32 @@ public class RegisterAnalyticInput {
     /**
      * Identificador do analytics seguindo o padrão: analytic://tenantDomain/identificadorUnico
      */
-    public String id;
+    private String id;
     /**
      * Nome do analytic
      */
-    public String name;
+    private String name;
     /**
      * Título a ser exibido podendo ser uma chave de tradução no padrão platform.cms.nome
      */
-    public String title;
+    private String title;
     /**
      * Informações do gráfico do analytic, se não informado será mantido o estado anterior.
      */
-    public Chart chart;
+    private Chart chart;
     /**
      * O tamanho preferido para melhor visualização
      */
-    public PreferredSize preferredSize;
+    private PreferredSize preferredSize;
     /**
      * As tags associadas a esse analytic
      */
-    public java.util.List<String> tags;
+    private java.util.List<String> tags;
     /**
      * Propriedades adicionais do painel.
      * Quando uma propriedade é omitida, a mesma é removida.
      */
-    public java.util.List<Property> properties;
+    private java.util.List<Property> properties;
 
     /**
      * This convenience constructor allows initialization of all required fields.

@@ -16,10 +16,10 @@ public class ListFactoryDefaultPagesInput {
     /**
      * O valor a ser pesquisado no campo nome da página.
      */
-    public String searchValue;
+    private String searchValue;
     /**
      * As configurações de paginação da listagem. Não definido, retornará os 10 primeiros resultados.
      */
-    public Pagination pagination;
+    private Pagination pagination;
 
 }

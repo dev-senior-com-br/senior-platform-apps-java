@@ -16,6 +16,6 @@ public class GetPageResourcesInput {
     /**
      * Identificador da página
      */
-    public String pageId;
+    private String pageId;
 
 }

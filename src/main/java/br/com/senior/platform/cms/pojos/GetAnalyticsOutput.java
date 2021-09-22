@@ -16,6 +16,6 @@ public class GetAnalyticsOutput {
     /**
      * Analytics ordenados pelo nome
      */
-    public java.util.List<BasicAnalytic> analytics;
+    private java.util.List<BasicAnalytic> analytics;
 
 }

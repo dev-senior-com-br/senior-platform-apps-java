@@ -16,10 +16,10 @@ public class ListLandingPagesInput {
     /**
      * O valor a ser pesquisado no campo título.
      */
-    public String searchValue;
+    private String searchValue;
     /**
      * As configurações de paginação da listagem. Não definido, retornará os 10 primeiros resultados.
      */
-    public Pagination pagination;
+    private Pagination pagination;
 
 }

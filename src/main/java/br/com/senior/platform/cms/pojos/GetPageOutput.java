@@ -16,6 +16,6 @@ public class GetPageOutput {
     /**
      * Informações da página
      */
-    public Page page;
+    private Page page;
 
 }

@@ -16,10 +16,10 @@ public class CopyPageInput {
     /**
      * Identificador da página a ser copiada no padrão page://{domínio do tenant}/{identificador único da página}
      */
-    public String pageId;
+    private String pageId;
     /**
      * Nome da nova página
      */
-    public String name;
+    private String name;
 
 }

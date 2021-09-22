@@ -16,6 +16,6 @@ public class GetAnalyticsInput {
     /**
      * identificadores para filtrar
      */
-    public java.util.List<String> ids;
+    private java.util.List<String> ids;
 
 }

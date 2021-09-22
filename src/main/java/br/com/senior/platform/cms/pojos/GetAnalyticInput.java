@@ -16,6 +16,6 @@ public class GetAnalyticInput {
     /**
      * identificador do analytic
      */
-    public String analyticId;
+    private String analyticId;
 
 }

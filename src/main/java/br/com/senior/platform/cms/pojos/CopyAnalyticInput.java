@@ -17,10 +17,10 @@ public class CopyAnalyticInput {
      * Identificador do analytic a ser copiado no padrão analytics://{domínio do tenant}/{identificador único do analytic}
      * ou analytics://factory/{domínio do tenant}/{identificador único do analytic}
      */
-    public String analyticId;
+    private String analyticId;
     /**
      * Nome do novo analytics
      */
-    public String name;
+    private String name;
 
 }

@@ -19,27 +19,27 @@ public class LandingPage {
     /**
      * Identificador da landing page no formato landing://{domínio do tenant}/{identificador único da página}
      */
-    public String id;
+    private String id;
     /**
      * Informações da página
      */
-    public Page page;
+    private Page page;
     /**
      * Título da página
      */
-    public String title;
+    private String title;
     /**
      * Se inclui o header da página com o título
      */
-    public Boolean includeHeader = false;
+    private Boolean includeHeader = false;
     /**
      * Tipo da landing page
      */
-    public LandingPageType landingPageType;
+    private LandingPageType landingPageType;
     /**
      * Papéis da landing page se for compartilhada
      */
-    public java.util.List<String> roles;
+    private java.util.List<String> roles;
 
     /**
      * This convenience constructor allows initialization of all required fields.

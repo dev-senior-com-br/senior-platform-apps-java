@@ -16,6 +16,6 @@ public class RegisterAnalyticOutput {
     /**
      * Identificador do analytic criado
      */
-    public String id;
+    private String id;
 
 }

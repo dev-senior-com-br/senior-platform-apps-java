@@ -16,6 +16,6 @@ public class SaveLandingPagesOrderInput {
     /**
      * Os identificadores das landing pages na ordem que elas devem ser apresentadas
      */
-    public java.util.List<String> landingPageId;
+    private java.util.List<String> landingPageId;
 
 }

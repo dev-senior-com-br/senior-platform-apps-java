@@ -19,35 +19,35 @@ public class Widget {
     /**
      * Identificador URI desse widget. 
      */
-    public String id;
+    private String id;
     /**
      * A chave de internacionalização do nome desse widget. Chave associada ao bundle do platform.cms
      */
-    public String name;
+    private String name;
     /**
      * A chave de internacionalização da descrição desse widget. Chave associada ao bundle do platform.cms
      */
-    public String description;
+    private String description;
     /**
      * O recurso necessário para acessar esse widget
      */
-    public Permission permission;
+    private Permission permission;
     /**
      * A URL onde esse widget se encontra
      */
-    public String url;
+    private String url;
     /**
      * A URL onde pode ser obtido o thumbnail desse widget
      */
-    public String thumbnailURL;
+    private String thumbnailURL;
     /**
      * As tags associadas a esse widget
      */
-    public java.util.List<String> tags;
+    private java.util.List<String> tags;
     /**
      * O tamanho preferido para melhor visualização
      */
-    public PreferredSize preferredSize;
+    private PreferredSize preferredSize;
 
     /**
      * This convenience constructor allows initialization of all required fields.

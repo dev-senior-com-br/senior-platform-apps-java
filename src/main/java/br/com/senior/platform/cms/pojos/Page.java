@@ -19,31 +19,31 @@ public class Page {
     /**
      * Identificador da página no padrão page://{domínio do tenant}/{identificador único da página}
      */
-    public String id;
+    private String id;
     /**
      * Nome da página
      */
-    public String name;
+    private String name;
     /**
      * Indica se devem ser enviadas as credenciais para os componentes da página
      */
-    public Boolean credentials = false;
+    private Boolean credentials = false;
     /**
      * Indica se os componentes possuirão tamanhos absolutos (fixos) ou relativos à tela
      */
-    public PositionType positionType;
+    private PositionType positionType;
     /**
      * Permissão necessária para visualizar a página
      */
-    public Permission permission;
+    private Permission permission;
     /**
      * Os componentes da página
      */
-    public java.util.List<Component> components;
+    private java.util.List<Component> components;
     /**
      * Mostrar o barra de ferramentas na página
      */
-    public Boolean includeToolbar = false;
+    private Boolean includeToolbar = false;
 
     /**
      * This convenience constructor allows initialization of all required fields.

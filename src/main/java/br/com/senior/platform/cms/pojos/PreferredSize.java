@@ -19,10 +19,10 @@ public class PreferredSize {
     /**
      * Altura, quando utilizada em uma página com valores absolutos, cada unidade representará 40 pixels
      */
-    public Long height;
+    private Long height;
     /**
      * Largura
      */
-    public Long width;
+    private Long width;
 
 }

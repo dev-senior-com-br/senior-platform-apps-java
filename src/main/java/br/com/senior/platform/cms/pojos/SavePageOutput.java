@@ -16,6 +16,6 @@ public class SavePageOutput {
     /**
      * Identificador da página
      */
-    public String pageId;
+    private String pageId;
 
 }

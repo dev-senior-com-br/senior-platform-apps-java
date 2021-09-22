@@ -16,10 +16,10 @@ public class ListFactoryDefaultLandingPagesOutput {
     /**
      * Os registros retornados da listagem
      */
-    public java.util.List<BasicLandingPage> landingPages;
+    private java.util.List<BasicLandingPage> landingPages;
     /**
      * Informações sobre os resultados da listagem
      */
-    public ListInformation listInformation;
+    private ListInformation listInformation;
 
 }

@@ -16,6 +16,6 @@ public class GetWidgetInput {
     /**
      * O identificador do widget
      */
-    public String widgetId;
+    private String widgetId;
 
 }

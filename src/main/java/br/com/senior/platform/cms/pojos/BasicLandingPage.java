@@ -19,23 +19,23 @@ public class BasicLandingPage {
     /**
      * Identificador da landing page no formato landing://{domínio do tenant}/{identificador único da página}
      */
-    public String id;
+    private String id;
     /**
      * Identificador da página
      */
-    public String pageId;
+    private String pageId;
     /**
      * Título da página
      */
-    public String title;
+    private String title;
     /**
      * Se inclui o header da página com o título
      */
-    public Boolean includeHeader = false;
+    private Boolean includeHeader = false;
     /**
      * Tipo da landing page
      */
-    public LandingPageType landingPageType;
+    private LandingPageType landingPageType;
 
     /**
      * This convenience constructor allows initialization of all required fields.

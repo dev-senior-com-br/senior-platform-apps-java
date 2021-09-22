@@ -19,23 +19,23 @@ public class BasicPage {
     /**
      * Identificador da página no padrão page://{domínio do tenant}/{identificador único da página}
      */
-    public String id;
+    private String id;
     /**
      * Nome da página
      */
-    public String name;
+    private String name;
     /**
      * Indica se devem ser enviadas as credenciais para os componentes da página
      */
-    public Boolean credentials = false;
+    private Boolean credentials = false;
     /**
      * Indica se os componentes possuirão tamanhos absolutos (fixos) ou relativos à tela
      */
-    public PositionType positionType;
+    private PositionType positionType;
     /**
      * Permissão necessária para visualizar a página
      */
-    public Permission permission;
+    private Permission permission;
 
     /**
      * This convenience constructor allows initialization of all required fields.

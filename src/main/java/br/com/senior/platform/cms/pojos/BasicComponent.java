@@ -20,14 +20,14 @@ public class BasicComponent {
     /**
      * Altura
      */
-    public Long height;
+    private Long height;
     /**
      * Largura
      */
-    public Long width;
+    private Long width;
     /**
      * Posição onde inicia a exibição do componente
      */
-    public Position position;
+    private Position position;
 
 }

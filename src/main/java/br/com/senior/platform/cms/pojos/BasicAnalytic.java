@@ -19,35 +19,35 @@ public class BasicAnalytic {
     /**
      * Identificador do analytics seguindo o padrão: analytic://tenantDomain/identificadorUnico
      */
-    public String id;
+    private String id;
     /**
      * Nome do widget
      */
-    public String name;
+    private String name;
     /**
      * Título a ser exibido podendo ser uma chave de tradução no padrão platform.cms.nome
      */
-    public String title;
+    private String title;
     /**
      * As tags associadas a esse analytic
      */
-    public java.util.List<String> tags;
+    private java.util.List<String> tags;
     /**
      * O tamanho preferido para melhor visualização
      */
-    public PreferredSize preferredSize;
+    private PreferredSize preferredSize;
     /**
      * O tipo do gráfico
      */
-    public ChartType chartType;
+    private ChartType chartType;
     /**
      * Criado por
      */
-    public String createdBy;
+    private String createdBy;
     /**
      * Data de criação
      */
-    public java.util.Date createdDate;
+    private java.util.Date createdDate;
 
     /**
      * This convenience constructor allows initialization of all required fields.

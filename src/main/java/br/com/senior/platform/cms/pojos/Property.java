@@ -19,10 +19,10 @@ public class Property {
     /**
      * Nome da propriedade
      */
-    public String name;
+    private String name;
     /**
      * Valor da propriedade
      */
-    public String value;
+    private String value;
 
 }

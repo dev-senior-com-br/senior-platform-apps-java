@@ -18,6 +18,6 @@ public class RemovePersonalLandingPagesInput {
      * Se não informado será considerado o usuário corrente.
      * Usuários com somente permissão de personalizar só podem remover suas próprias páginas
      */
-    public String user;
+    private String user;
 
 }

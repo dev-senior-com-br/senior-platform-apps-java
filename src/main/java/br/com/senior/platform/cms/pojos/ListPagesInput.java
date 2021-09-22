@@ -16,14 +16,14 @@ public class ListPagesInput {
     /**
      * O valor a ser pesquisado no campo nome da página.
      */
-    public String searchValue;
+    private String searchValue;
     /**
      * Filtrar para somente as páginas criadas pelo usuário corrente
      */
-    public Boolean ownerOnly = false;
+    private Boolean ownerOnly = false;
     /**
      * As configurações de paginação da listagem. Não definido, retornará os 10 primeiros resultados.
      */
-    public Pagination pagination;
+    private Pagination pagination;
 
 }

@@ -19,23 +19,23 @@ public class Order {
     /**
      * Nome do schema
      */
-    public String schema;
+    private String schema;
     /**
      * Nome da tabela
      */
-    public String table;
+    private String table;
     /**
      * Coluna em que será aplicado o filtro
      */
-    public String column;
+    private String column;
     /**
      * Função aplicada
      */
-    public FunctionType function;
+    private FunctionType function;
     /**
      * Ordem
      */
-    public OrderType order;
+    private OrderType order;
 
     /**
      * This convenience constructor allows initialization of all required fields.

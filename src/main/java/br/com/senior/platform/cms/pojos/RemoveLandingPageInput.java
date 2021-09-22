@@ -16,6 +16,6 @@ public class RemoveLandingPageInput {
     /**
      * Identificador da página a ser excluída
      */
-    public String landingPageId;
+    private String landingPageId;
 
 }

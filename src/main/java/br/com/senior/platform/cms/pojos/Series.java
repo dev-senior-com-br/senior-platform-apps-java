@@ -19,10 +19,10 @@ public class Series {
     /**
      * Coluna que o conjunto de dados será vinculado
      */
-    public Column column;
+    private Column column;
     /**
      * Descrição do conjunto
      */
-    public String label;
+    private String label;
 
 }

@@ -16,6 +16,6 @@ public class CountAnalyticsDatasetInput {
     /**
      * Identificador do dataset seguindo o padrão: dataset://tenantDomain/identificadorUnico
      */
-    public String datasetId;
+    private String datasetId;
 
 }

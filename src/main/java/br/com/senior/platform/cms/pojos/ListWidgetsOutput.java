@@ -16,10 +16,10 @@ public class ListWidgetsOutput {
     /**
      * Os widgets que o usuário possui permissão de visualizar
      */
-    public java.util.List<Widget> widgets;
+    private java.util.List<Widget> widgets;
     /**
      * Informações sobre os resultados da listagem
      */
-    public ListInformation listInformation;
+    private ListInformation listInformation;
 
 }

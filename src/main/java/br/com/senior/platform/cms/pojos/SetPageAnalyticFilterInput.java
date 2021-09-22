@@ -16,23 +16,23 @@ public class SetPageAnalyticFilterInput {
     /**
      * Identificador da página
      */
-    public String pageId;
+    private String pageId;
     /**
      * Identificador do analytic
      */
-    public String analyticId;
+    private String analyticId;
     /**
      * Filtros
      */
-    public Expression filter;
+    private Expression filter;
     /**
      * A ordenação dos registros
      */
-    public java.util.List<Order> order;
+    private java.util.List<Order> order;
     /**
      * Filtros adicionais para o dataset do analytic
      */
-    public AdditionalFilter additionalFilter;
+    private AdditionalFilter additionalFilter;
 
     /**
      * This convenience constructor allows initialization of all required fields.

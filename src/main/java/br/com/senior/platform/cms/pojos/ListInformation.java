@@ -19,10 +19,10 @@ public class ListInformation {
     /**
      * Quantidade total de resultados encontrados
      */
-    public Long totalElements;
+    private Long totalElements;
     /**
      * Quantidade total de páginas encontradas
      */
-    public Long totalPages;
+    private Long totalPages;
 
 }

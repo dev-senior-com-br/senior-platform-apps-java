@@ -16,6 +16,6 @@ public class UnregisterAnalyticOutput {
     /**
      * Identificador do analytic desregistrado
      */
-    public String analyticId;
+    private String analyticId;
 
 }

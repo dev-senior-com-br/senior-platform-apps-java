@@ -16,6 +16,6 @@ public class GetPageResourcesOutput {
     /**
      * Recursos da página por tipo
      */
-    public java.util.List<PageResource> resources;
+    private java.util.List<PageResource> resources;
 
 }

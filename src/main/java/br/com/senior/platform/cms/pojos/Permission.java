@@ -19,10 +19,10 @@ public class Permission {
     /**
      * O URI do resource
      */
-    public String resource;
+    private String resource;
     /**
      * O nome da ação
      */
-    public String action;
+    private String action;
 
 }

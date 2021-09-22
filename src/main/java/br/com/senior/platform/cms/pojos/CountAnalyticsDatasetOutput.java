@@ -16,6 +16,6 @@ public class CountAnalyticsDatasetOutput {
     /**
      * Retorna a quantidade de analytics que utilizam o dataset
      */
-    public Long size;
+    private Long size;
 
 }

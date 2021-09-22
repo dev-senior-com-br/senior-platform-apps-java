@@ -16,6 +16,6 @@ public class RemovePageInput {
     /**
      * Identificador da página a ser excluída
      */
-    public String pageId;
+    private String pageId;
 
 }

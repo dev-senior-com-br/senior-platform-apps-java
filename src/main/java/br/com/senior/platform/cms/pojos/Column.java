@@ -19,47 +19,47 @@ public class Column {
     /**
      * Nome do schema
      */
-    public String schema;
+    private String schema;
     /**
      * Nome da tabela
      */
-    public String table;
+    private String table;
     /**
      * Nome da coluna
      */
-    public String column;
+    private String column;
     /**
      * Label da coluna
      */
-    public String label;
+    private String label;
     /**
      * Informa uma função aplicada na coluna
      */
-    public FunctionType function;
+    private FunctionType function;
     /**
      * Precisão para formatação do valor
      */
-    public Long precision;
+    private Long precision;
     /**
      * Prefixo do label
      */
-    public String prefix;
+    private String prefix;
     /**
      * Sufixo do label
      */
-    public String sufix;
+    private String sufix;
     /**
      * Máscara da coluna
      */
-    public String mask;
+    private String mask;
     /**
      * Campo que identifica a latitude da localização a ser renderizada no gráfico de tipo mapa
      */
-    public Column latitude;
+    private Column latitude;
     /**
      * Campo que identifica a longitude da localização a ser renderizada no gráfico de tipo mapa
      */
-    public Column longitude;
+    private Column longitude;
 
     /**
      * This convenience constructor allows initialization of all required fields.

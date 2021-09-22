@@ -16,10 +16,10 @@ public class ListAnalyticsOutput {
     /**
      * Os registros retornados da listagem
      */
-    public java.util.List<BasicAnalytic> analytics;
+    private java.util.List<BasicAnalytic> analytics;
     /**
      * Informações sobre os resultados da listagem
      */
-    public ListInformation listInformation;
+    private ListInformation listInformation;
 
 }

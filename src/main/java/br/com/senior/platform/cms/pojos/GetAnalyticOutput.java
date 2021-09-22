@@ -16,6 +16,6 @@ public class GetAnalyticOutput {
     /**
      * Os dados do componente
      */
-    public Analytic analytic;
+    private Analytic analytic;
 
 }

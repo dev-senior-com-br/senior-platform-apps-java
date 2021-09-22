@@ -16,6 +16,6 @@ public class CopyPageOutput {
     /**
      * Identificador da nova página
      */
-    public String pageId;
+    private String pageId;
 
 }

@@ -16,6 +16,6 @@ public class GetLandingPageOutput {
     /**
      * Informações completas da landing page com a página
      */
-    public LandingPage landingPage;
+    private LandingPage landingPage;
 
 }

@@ -16,10 +16,10 @@ public class ListPagesOutput {
     /**
      * Retorna as páginas
      */
-    public java.util.List<BasicPage> pages;
+    private java.util.List<BasicPage> pages;
     /**
      * Informações sobre os resultados da listagem
      */
-    public ListInformation listInformation;
+    private ListInformation listInformation;
 
 }

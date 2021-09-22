@@ -19,10 +19,10 @@ public class Position {
     /**
      * Linha
      */
-    public Long row;
+    private Long row;
     /**
      * Coluna
      */
-    public Long column;
+    private Long column;
 
 }

@@ -19,18 +19,18 @@ public class PageResource {
     /**
      * Nome do componente
      */
-    public String name;
+    private String name;
     /**
      * Tipo do componente
      */
-    public ComponentType type;
+    private ComponentType type;
     /**
      * URI do recurso
      */
-    public String uri;
+    private String uri;
     /**
      * Ação do recurso
      */
-    public String actionUri;
+    private String actionUri;
 
 }

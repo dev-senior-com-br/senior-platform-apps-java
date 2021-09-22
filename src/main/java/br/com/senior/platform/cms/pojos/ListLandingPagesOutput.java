@@ -16,10 +16,10 @@ public class ListLandingPagesOutput {
     /**
      * Retorna as páginas, por questões de performance, os papéis em páginas compartilhadas não será retornado
      */
-    public java.util.List<BasicLandingPage> landingPages;
+    private java.util.List<BasicLandingPage> landingPages;
     /**
      * Informações sobre os resultados da listagem
      */
-    public ListInformation listInformation;
+    private ListInformation listInformation;
 
 }

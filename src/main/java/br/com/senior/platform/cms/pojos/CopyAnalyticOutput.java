@@ -16,6 +16,6 @@ public class CopyAnalyticOutput {
     /**
      * Identificador do novo analytic
      */
-    public String analyticId;
+    private String analyticId;
 
 }

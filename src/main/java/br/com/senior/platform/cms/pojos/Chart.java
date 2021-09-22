@@ -19,27 +19,27 @@ public class Chart {
     /**
      * Tipo do gráfico
      */
-    public ChartType type;
+    private ChartType type;
     /**
      * Categoria, opcional para o tipo de gráfico GAUGE
      */
-    public Column category;
+    private Column category;
     /**
      * Conjunto de valores a serem exibidos, se o tipo de gráfico for pizza, somente um conjunto é aceito
      */
-    public java.util.List<Series> series;
+    private java.util.List<Series> series;
     /**
      * Identificador do dataset que será vinculado ao gráfico
      */
-    public String datasetId;
+    private String datasetId;
     /**
      * Filtros
      */
-    public Expression filter;
+    private Expression filter;
     /**
      * A ordenação dos registros
      */
-    public java.util.List<Order> order;
+    private java.util.List<Order> order;
 
     /**
      * This convenience constructor allows initialization of all required fields.
