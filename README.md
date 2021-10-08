@@ -20,7 +20,7 @@ A documentação Swagger para a versão web destas e outras APIs da Senior, assi
         <dependency>
             <groupId>br.com.senior</groupId>
             <artifactId>senior-platform-apps-java</artifactId>
-            <version>0.2.0</version>
+            <version>0.3.0</version>
         </dependency>
     </dependencies>
     ...
