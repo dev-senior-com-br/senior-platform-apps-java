@@ -90,7 +90,7 @@ public class CmsClient extends BaseClient {
      * @throws ServiceException - Erro tratado do serviço.
      */
     public ListAnalyticsOutput listAnalytics(ListAnalyticsInput payload) throws ServiceException {
-        return execute(getActionsUrl(ApiPath.Cms.LIST_ANALYTICS), payload, token, ListAnalyticsOutput.class);
+        return execute(getQueriesUrl(ApiPath.Cms.LIST_ANALYTICS), payload, token, ListAnalyticsOutput.class);
     }
 
     /**
@@ -102,7 +102,7 @@ public class CmsClient extends BaseClient {
      */
     public GetAnalyticOutput getAnalytic(String analyticId) throws ServiceException {
         GetAnalyticInput payload = new GetAnalyticInput(analyticId);
-        return execute(getActionsUrl(ApiPath.Cms.GET_ANALYTIC), payload, token, GetAnalyticOutput.class);
+        return execute(getQueriesUrl(ApiPath.Cms.GET_ANALYTIC), payload, token, GetAnalyticOutput.class);
     }
 
     /**
@@ -113,7 +113,7 @@ public class CmsClient extends BaseClient {
      * @throws ServiceException - Erro tratado do serviço.
      */
     public GetAnalyticsOutput getAnalytics(GetAnalyticsInput payload) throws ServiceException {
-        return execute(getActionsUrl(ApiPath.Cms.GET_ANALYTICS), payload, token, GetAnalyticsOutput.class);
+        return execute(getQueriesUrl(ApiPath.Cms.GET_ANALYTICS), payload, token, GetAnalyticsOutput.class);
     }
 
     /**
@@ -148,7 +148,7 @@ public class CmsClient extends BaseClient {
      */
     public CountAnalyticsDatasetOutput countAnalyticsDataset(String datasetId) throws ServiceException {
         CountAnalyticsDatasetInput payload = new CountAnalyticsDatasetInput(datasetId);
-        return execute(getActionsUrl(ApiPath.Cms.COUNT_ANALYTICS_DATASET), payload, token, CountAnalyticsDatasetOutput.class);
+        return execute(getQueriesUrl(ApiPath.Cms.COUNT_ANALYTICS_DATASET), payload, token, CountAnalyticsDatasetOutput.class);
     }
 
     /**
@@ -159,7 +159,7 @@ public class CmsClient extends BaseClient {
      * @throws ServiceException - Erro tratado do serviço.
      */
     public ListFactoryDefaultAnalyticsOutput listFactoryDefaultAnalytics(ListFactoryDefaultAnalyticsInput payload) throws ServiceException {
-        return execute(getActionsUrl(ApiPath.Cms.LIST_FACTORY_DEFAULT_ANALYTICS), payload, token, ListFactoryDefaultAnalyticsOutput.class);
+        return execute(getQueriesUrl(ApiPath.Cms.LIST_FACTORY_DEFAULT_ANALYTICS), payload, token, ListFactoryDefaultAnalyticsOutput.class);
     }
 
     /**
@@ -215,7 +215,7 @@ public class CmsClient extends BaseClient {
      */
     public GetPageResourcesOutput getPageResources(String pageId) throws ServiceException {
         GetPageResourcesInput payload = new GetPageResourcesInput(pageId);
-        return execute(getActionsUrl(ApiPath.Cms.GET_PAGE_RESOURCES), payload, token, GetPageResourcesOutput.class);
+        return execute(getQueriesUrl(ApiPath.Cms.GET_PAGE_RESOURCES), payload, token, GetPageResourcesOutput.class);
     }
 
     /**
@@ -251,7 +251,7 @@ public class CmsClient extends BaseClient {
      * @throws ServiceException - Erro tratado do serviço.
      */
     public ListFactoryDefaultPagesOutput listFactoryDefaultPages(ListFactoryDefaultPagesInput payload) throws ServiceException {
-        return execute(getActionsUrl(ApiPath.Cms.LIST_FACTORY_DEFAULT_PAGES), payload, token, ListFactoryDefaultPagesOutput.class);
+        return execute(getQueriesUrl(ApiPath.Cms.LIST_FACTORY_DEFAULT_PAGES), payload, token, ListFactoryDefaultPagesOutput.class);
     }
 
     /**
@@ -352,7 +352,7 @@ public class CmsClient extends BaseClient {
      * @throws ServiceException - Erro tratado do serviço.
      */
     public ListFactoryDefaultLandingPagesOutput listFactoryDefaultLandingPages(ListFactoryDefaultLandingPagesInput payload) throws ServiceException {
-        return execute(getActionsUrl(ApiPath.Cms.LIST_FACTORY_DEFAULT_LANDING_PAGES), payload, token, ListFactoryDefaultLandingPagesOutput.class);
+        return execute(getQueriesUrl(ApiPath.Cms.LIST_FACTORY_DEFAULT_LANDING_PAGES), payload, token, ListFactoryDefaultLandingPagesOutput.class);
     }
 
     /**
@@ -363,7 +363,7 @@ public class CmsClient extends BaseClient {
      * @throws ServiceException - Erro tratado do serviço.
      */
     public ListWidgetsOutput listWidgets(ListWidgetsInput payload) throws ServiceException {
-        return execute(getActionsUrl(ApiPath.Cms.LIST_WIDGETS), payload, token, ListWidgetsOutput.class);
+        return execute(getQueriesUrl(ApiPath.Cms.LIST_WIDGETS), payload, token, ListWidgetsOutput.class);
     }
 
     /**
@@ -375,7 +375,7 @@ public class CmsClient extends BaseClient {
      */
     public Widget getWidget(String widgetId) throws ServiceException {
         GetWidgetInput payload = new GetWidgetInput(widgetId);
-        return execute(getActionsUrl(ApiPath.Cms.GET_WIDGET), payload, token, Widget.class);
+        return execute(getQueriesUrl(ApiPath.Cms.GET_WIDGET), payload, token, Widget.class);
     }
 
     /**
@@ -386,7 +386,7 @@ public class CmsClient extends BaseClient {
      * @throws ServiceException - Erro tratado do serviço.
      */
     public ListFactoryDefaultWidgetsOutput listFactoryDefaultWidgets(ListFactoryDefaultWidgetsInput payload) throws ServiceException {
-        return execute(getActionsUrl(ApiPath.Cms.LIST_FACTORY_DEFAULT_WIDGETS), payload, token, ListFactoryDefaultWidgetsOutput.class);
+        return execute(getQueriesUrl(ApiPath.Cms.LIST_FACTORY_DEFAULT_WIDGETS), payload, token, ListFactoryDefaultWidgetsOutput.class);
     }
 
 }

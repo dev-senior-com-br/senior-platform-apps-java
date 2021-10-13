@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+-   Alterado alguns métodos do `CmsClient` que deveriam chamar o getQueriesUrl para montar as URLs das requições, ao invés de chamar o getActionsUrl
+
 ## [0.2.0] - 2021-09-22
 
 ### Added
