@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.0] - 2021-10-13
+
 ### Changed
 
 -   Alterado alguns métodos do `CmsClient` que deveriam chamar o getQueriesUrl para montar as URLs das requições, ao invés de chamar o getActionsUrl
@@ -38,7 +40,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
-[Unreleased]: https://github.com/dev-senior-com-br/senior-platform-apps-java/compare/0.2.0...HEAD
+[Unreleased]: https://github.com/dev-senior-com-br/senior-platform-apps-java/compare/0.3.0...HEAD
+
+[0.3.0]: https://github.com/dev-senior-com-br/senior-platform-apps-java/compare/0.2.0...0.3.0
 
 [0.2.0]: https://github.com/dev-senior-com-br/senior-platform-apps-java/compare/0.1.0...0.2.0
 
