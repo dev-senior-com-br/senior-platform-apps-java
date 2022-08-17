@@ -1,3 +1,9 @@
+# SDK Descontinuada!
+
+Caso julgue necessário o uso de uma SDK, sugerimos a utilização de geradores código a partir do swagger de cada API via ferramenta https://editor.swagger.io/ (Opção Generate Client)
+
+<hr />
+<strike>
 # Senior Plataform Apps SDK para Java
 
 Esta biblioteca permite que desenvolvedores realizem integrações com algumas das APIs do senior X Plataform da Senior em projetos Java. Essa mesma biblioteca também está [disponível para Node.js](https://github.com/dev-senior-com-br/senior-platform-apps-node).
@@ -109,3 +115,4 @@ Criar um issue https://github.com/dev-senior-com-br/senior-platform-apps-java/is
 ## License
 
 Copyright © 2020.
+</strike>
